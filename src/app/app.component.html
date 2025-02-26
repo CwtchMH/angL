@@ -1,3 +1,13 @@
-<p>{{ title }}</p>
-
-<app-todo-list></app-todo-list>
+<div class="container">
+  <div class="header">
+    <p>Angular Learning</p>
+  </div>
+  <div class="function" *ngIf="router.url !== '/add'">
+    <button mat-raised-button class="btn-add" routerLink="/add">
+      Add a new task
+    </button>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

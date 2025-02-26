@@ -1,0 +1,35 @@
+<div class="todo-add-container">
+  <p>Add new task</p>
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Select features</mat-label>
+      <mat-select formControlName="feature">
+        <mat-option *ngFor="let feature of features" [value]="feature">
+          {{ feature }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input type="text" matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Due Date</mat-label>
+      <input type="date" matInput formControlName="dueDate" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        formControlName="description"
+        placeholder="Description"
+      ></textarea>
+    </mat-form-field>
+    <div class="btn-control">
+      <button mat-raised-button routerLink="">Cancel</button>
+      <button mat-raised-button type="submit" [disabled]="!todoForm.valid">
+        Add
+      </button>
+    </div>
+  </form>
+</div>

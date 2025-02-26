@@ -1,0 +1,34 @@
+<div class="list">
+  <div class="iu align-width">
+    <p class="header-list">Important - Urgent</p>
+    <div class="content">
+      <div class="todo-title" *ngFor="let title of list">
+        <p class="title-content">{{ title.title }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="in align-width">
+    <p class="header-list">Important - Nonurgent</p>
+    <div class="content">
+      <div class="todo-title" *ngFor="let title of list">
+        <p class="title-content">{{ title.title }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="uu align-width">
+    <p class="header-list">Unimportant - Urgent</p>
+    <div class="content">
+      <div class="todo-title" *ngFor="let title of list">
+        <p class="title-content">{{ title.title }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="un align-width">
+    <p class="header-list">Unimportant - Nonurgent</p>
+    <div class="content">
+      <div class="todo-title" *ngFor="let title of list">
+        <p class="title-content">{{ title.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
